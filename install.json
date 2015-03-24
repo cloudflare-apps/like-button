@@ -10,6 +10,7 @@
   "options": {
     "properties": {
       "layout": {
+        "order": 2,
         "type": "string",
         "title": "Button style",
         "format": "radios",
@@ -35,11 +36,13 @@
         "format": "element"
       },
       "showAdvanced": {
+        "order": 3,
         "type": "boolean",
         "title": "Show advanced options",
         "default": false
       },
       "advanced": {
+        "order": 4,
         "type": "object",
         "title": "Advanced options",
         "showIf": {
@@ -47,6 +50,7 @@
         },
         "properties": {
           "urlType": {
+            "order": 1,
             "type": "string",
             "title": "URL to Like",
             "format": "radios",
@@ -61,6 +65,7 @@
             "default": "automatic"
           },
           "url": {
+            "order": 2,
             "type": "string",
             "title": "URL",
             "showIf": {
@@ -68,6 +73,7 @@
             }
           },
           "action": {
+            "order": 3,
             "type": "string",
             "title": "Button text",
             "description": "Facebook allows Like buttons to alternatively use the text “Recommend”.",
@@ -83,11 +89,13 @@
             "default": "like"
           },
           "share": {
+            "order": 4,
             "type": "boolean",
             "title": "Also show “Share” button",
             "default": true
           },
           "showFaces": {
+            "order": 5,
             "type": "boolean",
             "title": "Show profile photos of those who’ve liked alongside the button",
             "default": false
