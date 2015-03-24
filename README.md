@@ -1,0 +1,9 @@
+[![Add a Facebook Like button to your website](like-button-icon.png)](http://github.hubspot.com/shepherd/docs/welcome)
+
+__Install with [Eager](http://eager.io)__
+
+Adding a Facebook like button to your website has never been easier. Click Install to get started.
+
+<a href="https://eager.io">
+  <img src="https://install.eager.io/install-button.png" border="0" width="126">
+</a>

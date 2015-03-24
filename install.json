@@ -1,0 +1,99 @@
+{
+  "resources": {
+    "head": [
+      {
+        "type": "script",
+        "src": "./head.js"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "layout": {
+        "type": "string",
+        "title": "Button style",
+        "format": "radios",
+        "enum": [
+          "button",
+          "button_count",
+          "box_count",
+          "standard"
+        ],
+        "enumNames": {
+          "button": "Small button",
+          "button_count": "Small button with Like count",
+          "box_count": "Large button with Like count",
+          "standard": "Small button with Like count and message"
+        },
+        "default": "button_count"
+      },
+      "location": {
+        "order": 2,
+        "title": "Location",
+        "description": "Select where you want the icons to be added to your site.",
+        "type": "object",
+        "format": "element"
+      },
+      "showAdvanced": {
+        "type": "boolean",
+        "title": "Show advanced options",
+        "default": false
+      },
+      "advanced": {
+        "type": "object",
+        "title": "Advanced options",
+        "showIf": {
+          "showAdvanced": true
+        },
+        "properties": {
+          "urlType": {
+            "type": "string",
+            "title": "URL to Like",
+            "format": "radios",
+            "enum": [
+              "automatic",
+              "provided"
+            ],
+            "enumNames": {
+              "automatic": "Automatically use the URL of the page displaying the button",
+              "provided": "Specify a particular URL"
+            },
+            "default": "automatic"
+          },
+          "url": {
+            "type": "string",
+            "title": "URL",
+            "showIf": {
+              "urlType": "provided"
+            }
+          },
+          "action": {
+            "type": "string",
+            "title": "Button text",
+            "description": "Facebook allows Like buttons to alternatively use the text “Recommend”.",
+            "format": "radios",
+            "enum": [
+              "like",
+              "recommend"
+            ],
+            "enumNames": {
+              "like": "“Like”",
+              "recommend": "“Recommend”"
+            },
+            "default": "like"
+          },
+          "share": {
+            "type": "boolean",
+            "title": "Also show “Share” button",
+            "default": true
+          },
+          "showFaces": {
+            "type": "boolean",
+            "title": "Show profile photos of those who’ve liked alongside the button",
+            "default": false
+          }
+        }
+      }
+    }
+  }
+}
