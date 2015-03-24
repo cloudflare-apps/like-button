@@ -1,4 +1,4 @@
-[![Add a Facebook Like button to your website](like-button-icon.png)](http://github.hubspot.com/shepherd/docs/welcome)
+[![Add a Facebook Like button to your website](like-button-icon.png)](https://eager.io)
 
 __Install with [Eager](http://eager.io)__
 
