@@ -33,7 +33,11 @@
         "title": "Location",
         "description": "Select where you want the icons to be added to your site.",
         "type": "object",
-        "format": "element"
+        "format": "element",
+        "default": {
+          "selector": "h1",
+          "method": "after"
+        }
       },
       "showAdvanced": {
         "order": 3,
@@ -43,11 +47,11 @@
       },
       "advanced": {
         "order": 4,
-        "type": "object",
-        "title": "Advanced options",
         "showIf": {
           "showAdvanced": true
         },
+        "type": "object",
+        "title": "Advanced options",
         "properties": {
           "urlType": {
             "order": 1,
@@ -66,14 +70,17 @@
           },
           "url": {
             "order": 2,
-            "type": "string",
-            "title": "URL",
             "showIf": {
-              "urlType": "provided"
-            }
+              "advanced.urlType": "provided"
+            },
+            "type": "string",
+            "title": "URL"
           },
           "action": {
             "order": 3,
+            "showIf": {
+              "layout": "standard"
+            },
             "type": "string",
             "title": "Button text",
             "description": "Facebook allows Like buttons to alternatively use the text “Recommend”.",
@@ -96,6 +103,9 @@
           },
           "showFaces": {
             "order": 5,
+            "showIf": {
+              "layout": "standard"
+            },
             "type": "boolean",
             "title": "Show profile photos of those who’ve liked alongside the button",
             "default": false
