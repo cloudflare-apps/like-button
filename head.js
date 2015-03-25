@@ -57,7 +57,7 @@
 
     script = document.createElement('script');
     script.id = sdkId;
-    script.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    script.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0&appId=819140248140343";
 
     firstScript = document.getElementsByTagName('script')[0];
     firstScript.parentNode.insertBefore(script, firstScript);
