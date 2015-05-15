@@ -28,7 +28,7 @@
     if (Eager.installs.preview) {
       previewStyle = document.createElement('style');
       el.setAttribute('eager-app', 'like-button');
-      previewStyle.innerHTML = '[eager-app="like-button"] .fb-like > span, [eager-app="like-button"] .fb-like > span > iframe { height: auto !important; width: auto !important }';
+      previewStyle.innerHTML = '[eager-app="like-button"] .fb-like > span, [eager-app="like-button"] .fb-like > span > iframe { height: auto !important; width: auto !important; overflow: visible !important }';
       el.appendChild(previewStyle);
     }
 
