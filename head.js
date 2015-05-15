@@ -6,7 +6,7 @@
   options = INSTALL_OPTIONS;
 
   init = function() {
-    var el, url, button;
+    var el, url, button, previewStyle;
 
     el = Eager.createElement(options.location);
 
@@ -25,6 +25,13 @@
     button.setAttribute('data-share', options.advanced.share);
     button.setAttribute('data-show-faces', options.advanced.showFaces);
 
+    if (Eager.installs.preview) {
+      previewStyle = document.createElement('style');
+      el.setAttribute('eager-app', 'like-button');
+      previewStyle.innerHTML = '[eager-app="like-button"] .fb-like > span, [eager-app="like-button"] .fb-like > span > iframe { height: auto !important; width: auto !important }';
+      el.appendChild(previewStyle);
+    }
+
     el.appendChild(button);
 
     initFacebook();
@@ -33,7 +40,10 @@
   getCanonicalURL = function() {
     var url, head, link;
 
-    url = document.location.href;
+    if (Eager.installs.preview && Eager.proxy && Eager.proxy.originalURL && Eager.proxy.originalURL.raw)
+      url = Eager.proxy.originalURL.raw;
+    else
+      url = document.location.href;
 
     head = document.getElementsByTagName('head')[0];
     if (!head) return url;
