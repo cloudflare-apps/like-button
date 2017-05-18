@@ -3,7 +3,23 @@
     "head": [
       {
         "type": "script",
-        "src": "./head.js"
+        "src": "./source/app.js"
+      },
+      {
+        "type": "style",
+        "src": "./source/app.css"
+      }
+    ]
+  },
+  "preview": {
+    "handlers": [
+      {
+        "options": ["layout", "location", "advanced"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      },
+      {
+        "options": ["showAdvanced"],
+        "execute": "window"
       }
     ]
   },

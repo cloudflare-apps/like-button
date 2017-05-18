@@ -1,0 +1,10 @@
+cloudflare-app[app="like-button"] {
+  display: inline-block;
+}
+
+cloudflare-app[app="like-button"][cf-env="preview"] > span,
+cloudflare-app[app="like-button"][cf-env="preview"] > span > iframe {
+  height: auto !important;
+  width: auto !important;
+  overflow: visible !important;
+}

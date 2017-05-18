@@ -1,9 +1,9 @@
-Adding a Facebook like button to your website has never been easier.
+# Facebook Like Button
 
-<a href="https://eager.io/app/BurROp-cWQ3Y/install?source=button">
-  <img src="https://install.eager.io/install-button.png" border="0" width="126">
+<a href="https://www.cloudflare.com/apps/like-button/install?source=button">
+  <img
+    src="https://install.eager.io/install-button.png"
+    alt="Install Like Button with Cloudflare"
+    border="0"
+    width="150">
 </a>
-
-__Preview:__
-
-[![Add a Facebook Like button to your website](examples.png)](https://eager.io/app/BurROp-cWQ3Y/install)
